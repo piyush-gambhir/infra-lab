@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    typesense:
+        image: typesense/typesense:latest
+        command: --data-dir /data --api-key=xyz
+        ports:
+            - "8108:8108"
+        volumes:
+            - ./data:/data
+        restart: unless-stopped
