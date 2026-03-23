@@ -1,6 +1,6 @@
 services:
   mysql_db:
-    image: mysql:latest
+    image: mysql:8.4.8
     container_name: MySQLCont
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
     volumes:
       - mysql_db:/var/lib/mysql
   adminer:
-    image: adminer
+    image: adminer:5
     restart: unless-stopped
     ports:
       - "8006:8080"

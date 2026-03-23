@@ -1,8 +1,6 @@
-version: "3.7"
-
 services:
   redis:
-    image: redis:latest
+    image: redis:8.6.1
     container_name: redis
     restart: always
     ports:
@@ -12,7 +10,7 @@ services:
     command: ["redis-server", "--requirepass", "redis123"]
 
   redisinsight:
-    image: redislabs/redisinsight:latest
+    image: redis/redisinsight:2.68.0
     container_name: redisinsight
     restart: always
     ports:

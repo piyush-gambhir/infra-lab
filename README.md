@@ -8,8 +8,9 @@ A collection of ready-to-use Docker Compose setups for popular databases, caches
 -   `databases/` — MariaDB, MongoDB, MySQL, PostgreSQL
 -   `messaging-queues/` — Kafka, RabbitMQ
 -   `observability/` — Grafana & Prometheus, Jaeger, SonarQube
+-   `reverse-proxies/` — Nginx Proxy Manager
 -   `search-engines/` — Elasticsearch, Meilisearch, Typesense
--   `vector-databases/` — Qdrant, Weaviate
+-   `vector-databases/` — ChromaDB, Qdrant, Weaviate
 
 ## How to Use
 
