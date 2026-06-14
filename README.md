@@ -5,7 +5,7 @@ A collection of ready-to-use Docker Compose setups for popular databases, caches
 ## Directory Structure
 
 -   `caches/` — Memcached, Redis
--   `databases/` — MariaDB, MongoDB, MySQL, PostgreSQL
+-   `databases/` — ClickHouse, MariaDB, MongoDB, MySQL, PostgreSQL
 -   `messaging-queues/` — Kafka, RabbitMQ
 -   `observability/` — Grafana & Prometheus, Jaeger, SonarQube
 -   `reverse-proxies/` — Nginx Proxy Manager
