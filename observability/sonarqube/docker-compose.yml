@@ -1,6 +1,6 @@
 services:
   sonarqube:
-    image: sonarqube:26.2.0-community
+    image: sonarqube:26.6.0.123539-community
     container_name: sonarqube
     ports:
       - "9000:9000"
@@ -20,7 +20,7 @@ services:
     restart: unless-stopped
 
   db:
-    image: postgres:17.9
+    image: postgres:18.4
     container_name: sonarqube_db
     networks:
       - sonarnet
@@ -29,7 +29,9 @@ services:
       - POSTGRES_PASSWORD=sonar
       - POSTGRES_DB=sonar
     volumes:
-      - postgresql_data:/var/lib/postgresql/data
+      # Postgres 18+ stores data in a versioned subdir, so mount the parent
+      # (/var/lib/postgresql) instead of /var/lib/postgresql/data.
+      - postgresql_data:/var/lib/postgresql
     restart: unless-stopped
 
 networks:

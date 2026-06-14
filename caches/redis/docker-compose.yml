@@ -10,7 +10,7 @@ services:
     command: ["redis-server", "--requirepass", "redis123"]
 
   redisinsight:
-    image: redis/redisinsight:2.68.0
+    image: redis/redisinsight:3.4.2
     container_name: redisinsight
     restart: always
     ports:

@@ -14,7 +14,7 @@ services:
       - postgres_db:/var/lib/postgresql
 
   pgadmin:
-    image: dpage/pgadmin4:9.4
+    image: dpage/pgadmin4:9.15
     # restart: always
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@example.com

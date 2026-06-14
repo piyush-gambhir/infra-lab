@@ -1,6 +1,6 @@
 services:
   rabbitmq:
-    image: rabbitmq:4.2.5-management
+    image: rabbitmq:4.3.1-management
     container_name: RabbitMQContainer
     # restart: always
     environment:
