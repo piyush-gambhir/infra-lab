@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns: ["*"]
+  - package-ecosystem: docker
+    directories:
+      - "/caches/memcached"
+      - "/caches/redis"
+      - "/ci-cd/jenkins"
+      - "/databases/clickhouse"
+      - "/databases/mariadb"
+      - "/databases/mongodb"
+      - "/databases/mysql"
+      - "/databases/postgresql"
+      - "/messaging-queues/kafka"
+      - "/messaging-queues/rabbitmq"
+      - "/observability/grafana-prometheus"
+      - "/observability/jaeger"
+      - "/observability/sonarqube"
+      - "/reverse-proxies/nginx-proxy-manager"
+      - "/search-engines/elasticsearch"
+      - "/search-engines/meilisearch"
+      - "/search-engines/typesense"
+      - "/vector-databases/chrome_db"
+      - "/vector-databases/qdrant"
+      - "/vector-databases/weaviate"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      dependencies:
+        patterns: ["*"]
+        update-types: [minor, patch]
